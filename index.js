@@ -53,8 +53,8 @@ function createRock(x) {
     } else {
       $('rock').remove();
       //If the rock reached the bottom of the GAME, we should remove the rock from the DOM.
-
     }
+  moveRock();
   }
 
   // We should kick off the animation of the rock around here.
