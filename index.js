@@ -93,7 +93,7 @@ function moveDodgerLeft() {
   window.requestAnimationFrame(function() {
     const left =positionToInteger(DODGER.style.left)
     if (left>0) {
-      DODGER.stlye.left = `${left+=4}px`
+      DODGER.stlye.left = `${left-4}px`
      }
    })
  }
