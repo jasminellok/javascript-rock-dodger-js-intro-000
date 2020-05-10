@@ -80,7 +80,7 @@ function moveDodger(e) {
   //(Check the constants we've declared for you above) + be sure to use the functions declared below!
   if([LEFT_ARROW, RIGHT_ARROW].indexOf(e.which) > -1){ //if e.which is in [], is index >-1
     e.preventDefault(); //default action that belongs to event will not occur, ex: prevents clicked link from following the URL
-    e.stopPropagation();
+    e.stopPropagation(); //stops the bubbling of an event to parent elements, preventing any parent event handlers from being executed.
   } if (e.which === LEFT_ARROW) {
     moveDodgerLeft();
   } else if (e.which === RIGHT_ARROW) {
