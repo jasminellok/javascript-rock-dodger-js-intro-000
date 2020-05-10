@@ -94,7 +94,7 @@ function moveDodgerLeft() {
     if (left>0) {
       DODGER.stlye.left = `${left-4}px`
     }
-    window.requestAnimationFrame(moveLeft())
+    window.requestAnimationFrame(
   }
 }
 
@@ -106,8 +106,10 @@ function moveDodgerRight() {
     if (left<360) {
       DODGER.stlye.left = `${left+4}px`
     }
+    console.log('going right')
   });
 }
+
 
 /**
  * @param {string} p The position property
