@@ -43,17 +43,22 @@ function createRock(x) {
   rock.style.top = top //css style specifies top position of the element
   GAME.appendChild(rock);//Now that we have a rock, need to append to GAME + move it downwards.
   function moveRock() {
+    console.log("top:"+top);
     rock.style.top = `${top+=2}px`//fxn moves rock. (2 pixels /time)
     if (checkCollision(rock)) {
+      console.log("collision")
       return endGame();
       //If a rock collides with the DODGER,we should call endGame().
     } else if (top<GAME_HEIGHT) {
+      console.log("animate")
       window.requestAnimationFrame(moveRock);
       //Otherwise, if the rock hasn't reached the bottom of the GAME, we want to move it again.
     } else {
+      console.log("remove")
       $('rock').remove();
       //If the rock reached the bottom of the GAME, we should remove the rock from the DOM.
     }
+    console.log("moving rock")
     moveRock();
   }
 
