@@ -37,13 +37,13 @@ function checkCollision(rock) {
 
 function createRock(x) {
   const rock = document.createElement('div')
-  rock.className = 'rock'
-  rock.style.left = `${x}px`
+  rock.className = 'rock' //define rock
+  rock.style.left = `${x}px` //css style specifies left position of the element
   var top = 0// Using Var because it is ref later
-  rock.style.top = top
+  rock.style.top = top //css style specifies top position of the element
   GAME.appendChild(rock);//Now that we have a rock, need to append to GAME + move it downwards.
   function moveRock() {
-    //This function moves the rock. (2 pixels at a time seems like a good pace.)
+    rock.style.top = `${top+=2}px`//fxn moves rock. (2 pixels /time)
     //If a rock collides with the DODGER,we should call endGame().
     //If the rock reached the bottom of the GAME, we should remove the rock from the DOM.
     //Otherwise, if the rock hasn't reached the bottom of the GAME, we want to move it again.
