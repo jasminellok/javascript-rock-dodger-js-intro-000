@@ -79,7 +79,10 @@ function moveDodger(e) {
   //`moveDodgerRight()` should be called  if the right arrow is pressed.
   //(Check the constants we've declared for you above) + be sure to use the functions declared below!
   document.addEventListener('keydown', function(e) {
-    if (e.which === LEFT_ARROW) {
+    if([LEFT_ARROW, RIGHT_ARROW].indexOf(e.which) > -1){
+        e.preventDefault();
+        e.stopPropagation();
+    } if (e.which === LEFT_ARROW) {
       window.requestAnimationFrame(moveDodgerLeft());
     } else if (e.which === RIGHT_ARROW) {
       window.requestAnimationFrame(moveDodgerRight());
