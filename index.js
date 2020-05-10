@@ -83,8 +83,9 @@ function moveDodger(e) {
       window.requestAnimationFrame(moveDodgerLeft());
     } else if (e.which === RIGHT_ARROW) {
       window.requestAnimationFrame(moveDodgerRight());
-    })
-  }
+    }
+  })
+}
 
 function moveDodgerLeft() {
   // implement me!
