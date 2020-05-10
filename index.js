@@ -24,9 +24,7 @@ function checkCollision(rock) {
     const dodgerLeftEdge = positionToInteger(DODGER.style.left) // Left limit
     const dodgerRightEdge = dodgerLeftEdge + 40;// The DODGER is 40 pixels wide -- how do we get the right edge?
     const rockLeftEdge = positionToInteger(rock.style.left)// rock edge
-
-    // FIXME: The rock is 20 pixel's wide -- how do we get the right edge?
-    const rockRightEdge = 0;
+    const rockRightEdge = rockLeftEdge + 20;//The rock is 20 pixel's wide -- how do we get the right edge?
 
     if (false /**
                * Think about it -- what's happening here?
