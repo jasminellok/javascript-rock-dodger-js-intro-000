@@ -56,10 +56,9 @@ function createRock(x) {
       //If the rock reached the bottom of the GAME, we should remove the rock from the DOM.
     }
   }
-  window.requestAnimationFrame(moveRock)
   // We should kick off the animation of the rock around here.
-  // Add the rock to ROCKS so that we can remove all rocks
-  // when there's a collision.
+  window.requestAnimationFrame(moveRock)
+  // Add the rock to ROCKS so that we can remove all rocks when there's a collision.
   ROCKS.push(rock)
   // Finally, return the rock element you've created.
   return rock
