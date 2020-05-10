@@ -43,7 +43,6 @@ function createRock(x) {
   rock.style.top = top //css style specifies top position of the element
   GAME.appendChild(rock);//Now that we have a rock, need to append to GAME + move it downwards.
   function moveRock() {
-    console.log("top:"+top);
     rock.style.top = `${top+=2}px`//fxn moves rock. (2 pixels /time)
     if (checkCollision(rock)) {
       return endGame();
