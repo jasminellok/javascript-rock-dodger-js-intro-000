@@ -51,6 +51,7 @@ function createRock(x) {
       GAME.removeChild(rock)
       //If the rock reached the bottom of the GAME, we should remove the rock from the DOM.
     } else {
+      rock.style.top = `${top+=2}px`
       //Otherwise, if the rock hasn't reached the bottom of the GAME, we want to move it again.
     }
   }
