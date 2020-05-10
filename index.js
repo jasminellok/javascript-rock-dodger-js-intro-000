@@ -104,9 +104,8 @@ function moveDodgerRight() {
     const left =positionToInteger(DODGER.style.left)
     if (left<360) {
       DODGER.stlye.left = `${left+4}px`
-     }
-   });
- }
+    }
+  });
 }
 
 /**
