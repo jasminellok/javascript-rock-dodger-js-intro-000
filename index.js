@@ -95,7 +95,7 @@ function moveDodgerLeft() {
     if (left>0) {
       DODGER.stlye.left = `${left-4}px`
      }
-   })
+   });
  }
 
 function moveDodgerRight() {
