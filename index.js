@@ -39,7 +39,7 @@ function createRock(x) {
   const rock = document.createElement('div')
   rock.className = 'rock'
   rock.style.left = `${x}px`
-  var top = 0// Hmmm, why would we have used `var` here?
+  var top = 0// Using Var because it is ref later
   rock.style.top = top
   GAME.appendChild(rock);//Now that we have a rock, need to append to GAME + move it downwards.
   function moveRock() {
