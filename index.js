@@ -78,8 +78,8 @@ function moveDodger(e) {
   //`moveDodgerLeft()` should be called if the left arrow is pressed
   //`moveDodgerRight()` should be called  if the right arrow is pressed.
   //(Check the constants we've declared for you above) + be sure to use the functions declared below!
-  if([LEFT_ARROW, RIGHT_ARROW].indexOf(e.which) > -1){
-    e.preventDefault();
+  if([LEFT_ARROW, RIGHT_ARROW].indexOf(e.which) > -1){ //if e.which is in [], is index >-1
+    e.preventDefault(); //default action that belongs to event will not occur, ex: prevents clicked link from following the URL
     e.stopPropagation();
   } if (e.which === LEFT_ARROW) {
     moveDodgerLeft();
